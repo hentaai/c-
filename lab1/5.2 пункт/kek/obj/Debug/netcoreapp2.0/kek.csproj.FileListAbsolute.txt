@@ -1,0 +1,10 @@
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/obj/Debug/netcoreapp2.0/kek.csproj.CoreCompileInputs.cache
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/obj/Debug/netcoreapp2.0/kek.AssemblyInfoInputs.cache
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/obj/Debug/netcoreapp2.0/kek.AssemblyInfo.cs
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/bin/Debug/netcoreapp2.0/kek.deps.json
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/bin/Debug/netcoreapp2.0/kek.runtimeconfig.json
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/bin/Debug/netcoreapp2.0/kek.runtimeconfig.dev.json
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/bin/Debug/netcoreapp2.0/kek.dll
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/bin/Debug/netcoreapp2.0/kek.pdb
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/obj/Debug/netcoreapp2.0/kek.dll
+/home/yerassyl/Projects/lab1/5.2 пункт/kek/obj/Debug/netcoreapp2.0/kek.pdb

@@ -1,0 +1,10 @@
+/home/yerassyl/c#/bin/Debug/netcoreapp2.0/c#.deps.json
+/home/yerassyl/c#/bin/Debug/netcoreapp2.0/c#.runtimeconfig.json
+/home/yerassyl/c#/bin/Debug/netcoreapp2.0/c#.runtimeconfig.dev.json
+/home/yerassyl/c#/bin/Debug/netcoreapp2.0/c#.dll
+/home/yerassyl/c#/bin/Debug/netcoreapp2.0/c#.pdb
+/home/yerassyl/c#/obj/Debug/netcoreapp2.0/c#.csproj.CoreCompileInputs.cache
+/home/yerassyl/c#/obj/Debug/netcoreapp2.0/c#.AssemblyInfoInputs.cache
+/home/yerassyl/c#/obj/Debug/netcoreapp2.0/c#.AssemblyInfo.cs
+/home/yerassyl/c#/obj/Debug/netcoreapp2.0/c#.dll
+/home/yerassyl/c#/obj/Debug/netcoreapp2.0/c#.pdb
