@@ -1,0 +1,10 @@
+/home/yerassyl/Projects/lab2/third/obj/Debug/netcoreapp2.0/third.csproj.CoreCompileInputs.cache
+/home/yerassyl/Projects/lab2/third/obj/Debug/netcoreapp2.0/third.AssemblyInfoInputs.cache
+/home/yerassyl/Projects/lab2/third/obj/Debug/netcoreapp2.0/third.AssemblyInfo.cs
+/home/yerassyl/Projects/lab2/third/bin/Debug/netcoreapp2.0/third.deps.json
+/home/yerassyl/Projects/lab2/third/bin/Debug/netcoreapp2.0/third.runtimeconfig.json
+/home/yerassyl/Projects/lab2/third/bin/Debug/netcoreapp2.0/third.runtimeconfig.dev.json
+/home/yerassyl/Projects/lab2/third/bin/Debug/netcoreapp2.0/third.dll
+/home/yerassyl/Projects/lab2/third/bin/Debug/netcoreapp2.0/third.pdb
+/home/yerassyl/Projects/lab2/third/obj/Debug/netcoreapp2.0/third.dll
+/home/yerassyl/Projects/lab2/third/obj/Debug/netcoreapp2.0/third.pdb

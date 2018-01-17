@@ -1,0 +1,10 @@
+/home/yerassyl/Projects/lab2/second/bin/Debug/netcoreapp2.0/second.deps.json
+/home/yerassyl/Projects/lab2/second/bin/Debug/netcoreapp2.0/second.runtimeconfig.json
+/home/yerassyl/Projects/lab2/second/bin/Debug/netcoreapp2.0/second.runtimeconfig.dev.json
+/home/yerassyl/Projects/lab2/second/bin/Debug/netcoreapp2.0/second.dll
+/home/yerassyl/Projects/lab2/second/bin/Debug/netcoreapp2.0/second.pdb
+/home/yerassyl/Projects/lab2/second/obj/Debug/netcoreapp2.0/second.csproj.CoreCompileInputs.cache
+/home/yerassyl/Projects/lab2/second/obj/Debug/netcoreapp2.0/second.AssemblyInfoInputs.cache
+/home/yerassyl/Projects/lab2/second/obj/Debug/netcoreapp2.0/second.AssemblyInfo.cs
+/home/yerassyl/Projects/lab2/second/obj/Debug/netcoreapp2.0/second.dll
+/home/yerassyl/Projects/lab2/second/obj/Debug/netcoreapp2.0/second.pdb
