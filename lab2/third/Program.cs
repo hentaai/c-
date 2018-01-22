@@ -53,17 +53,6 @@ namespace third
             File.WriteAllText(path,s);            
         }
 
-        public static int getMin(List<int> integers){   
-            int k = integers[0];
-            foreach(int c in integers){
-                if(c < k){
-                    k = c;
-                }
-            }
-            return k;
-        }
-
-
         static void Main(string[] args)
         {
             writedata(minprime(getdata(@"/home/yerassyl/Projects/lab2/third/text.txt")),(@"/home/yerassyl/Projects/lab2/third/writtentext.txt"));
