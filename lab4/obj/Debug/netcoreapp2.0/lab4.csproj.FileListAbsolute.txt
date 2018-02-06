@@ -1,0 +1,10 @@
+/home/yera/c-/lab4/obj/Debug/netcoreapp2.0/lab4.csproj.CoreCompileInputs.cache
+/home/yera/c-/lab4/obj/Debug/netcoreapp2.0/lab4.AssemblyInfoInputs.cache
+/home/yera/c-/lab4/obj/Debug/netcoreapp2.0/lab4.AssemblyInfo.cs
+/home/yera/c-/lab4/bin/Debug/netcoreapp2.0/lab4.deps.json
+/home/yera/c-/lab4/bin/Debug/netcoreapp2.0/lab4.runtimeconfig.json
+/home/yera/c-/lab4/bin/Debug/netcoreapp2.0/lab4.runtimeconfig.dev.json
+/home/yera/c-/lab4/bin/Debug/netcoreapp2.0/lab4.dll
+/home/yera/c-/lab4/bin/Debug/netcoreapp2.0/lab4.pdb
+/home/yera/c-/lab4/obj/Debug/netcoreapp2.0/lab4.dll
+/home/yera/c-/lab4/obj/Debug/netcoreapp2.0/lab4.pdb
