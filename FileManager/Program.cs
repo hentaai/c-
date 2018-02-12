@@ -33,7 +33,7 @@ namespace FileManager
         }
         static void Main(string[] args)
         {
-            DirectoryInfo dInfo = new DirectoryInfo(@"/home/yerassyl");
+            DirectoryInfo dInfo = new DirectoryInfo(@"/home/yera");
             int cursor = 0;
             int n = dInfo.GetFileSystemInfos().Length;
             ShowDirectoryInfo(dInfo,cursor);

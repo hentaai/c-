@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace c_
+namespace с_
 {
     class Program
     {

@@ -17,6 +17,8 @@ namespace snake
             Point coordinatess = new Point(0,0);
             Fruits fruit = new Fruits();
             Random rnd = new Random ();
+            int level = 1;
+            Wall wall = new Wall (level);
             Console.Clear();
             fruit.FoodMaker(coordinatess);
             fruit.DrawFood(coordinatess.x,coordinatess.y);
@@ -37,9 +39,9 @@ namespace snake
                 if(keyInfo.Key == ConsoleKey.R){
                     snake = new Snake();
                 }
-                if(snake.Bump()){
+                if(snake.Bump() || snake.Collide(wall)){
                     Console.Clear();
-                    Console.SetCursorPosition(5,5);
+                    Console.SetCursorPosition(50,50);
                     Console.WriteLine("GAME OVER");
                     Console.ReadKey();
                     snake = new Snake();
@@ -49,11 +51,13 @@ namespace snake
                     Console.Clear();
                     snake.Draw();
                     fruit.DrawFood(coordinatess.x,coordinatess.y);
+                
                 }
                 else{
                     Console.Clear();
                     snake.Draw();
                     fruit.DrawFood(coordinatess.x,coordinatess.y);
+                    
                 }
             } 
         }

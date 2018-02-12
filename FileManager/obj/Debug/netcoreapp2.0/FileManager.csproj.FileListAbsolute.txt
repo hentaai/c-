@@ -8,3 +8,13 @@
 /home/yerassyl/Рабочий стол/FileManager/obj/Debug/netcoreapp2.0/FileManager.AssemblyInfo.cs
 /home/yerassyl/Рабочий стол/FileManager/obj/Debug/netcoreapp2.0/FileManager.dll
 /home/yerassyl/Рабочий стол/FileManager/obj/Debug/netcoreapp2.0/FileManager.pdb
+/home/yera/c-/FileManager/bin/Debug/netcoreapp2.0/FileManager.deps.json
+/home/yera/c-/FileManager/bin/Debug/netcoreapp2.0/FileManager.runtimeconfig.json
+/home/yera/c-/FileManager/bin/Debug/netcoreapp2.0/FileManager.runtimeconfig.dev.json
+/home/yera/c-/FileManager/bin/Debug/netcoreapp2.0/FileManager.dll
+/home/yera/c-/FileManager/bin/Debug/netcoreapp2.0/FileManager.pdb
+/home/yera/c-/FileManager/obj/Debug/netcoreapp2.0/FileManager.csproj.CoreCompileInputs.cache
+/home/yera/c-/FileManager/obj/Debug/netcoreapp2.0/FileManager.AssemblyInfoInputs.cache
+/home/yera/c-/FileManager/obj/Debug/netcoreapp2.0/FileManager.AssemblyInfo.cs
+/home/yera/c-/FileManager/obj/Debug/netcoreapp2.0/FileManager.dll
+/home/yera/c-/FileManager/obj/Debug/netcoreapp2.0/FileManager.pdb

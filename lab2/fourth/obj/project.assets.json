@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "/home/yerassyl/.nuget/packages/": {},
+    "/home/yera/.nuget/packages/": {},
     "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/yerassyl/Projects/lab2/fourth/fourth.csproj",
+      "projectUniqueName": "/home/yera/c-/lab2/fourth/fourth.csproj",
       "projectName": "fourth",
-      "projectPath": "/home/yerassyl/Projects/lab2/fourth/fourth.csproj",
-      "packagesPath": "/home/yerassyl/.nuget/packages/",
-      "outputPath": "/home/yerassyl/Projects/lab2/fourth/obj/",
+      "projectPath": "/home/yera/c-/lab2/fourth/fourth.csproj",
+      "packagesPath": "/home/yera/.nuget/packages/",
+      "outputPath": "/home/yera/c-/lab2/fourth/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/yerassyl/.nuget/NuGet/NuGet.Config"
+        "/home/yera/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -704,7 +704,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },

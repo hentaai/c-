@@ -14,6 +14,7 @@ namespace snake
         public int cnt;
         public Random random = new Random();
         
+        
         public Snake()
         {
             body = new List<Point>();
@@ -74,6 +75,13 @@ namespace snake
                 }
             }
             
+        }
+        public bool Collide(Wall s){
+            foreach(Point p in s.body){
+                if(p.x == body[0].x && p.y == body[0].y)
+                return true;
+            }
+            return false;
         }
         public bool Bump(){
             for(int i = 1;i < body.Count;i++){

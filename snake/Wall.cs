@@ -13,7 +13,7 @@ namespace snake
         public ConsoleColor color;
 
         public void ReadLevel(int level){
-            StreamReader sr = new StreamReader(@"/Home/c-/snake/levels"+level+".txt");
+            StreamReader sr = new StreamReader(@"/home/yera/c-/snake/levels/level"+level+".txt");
             int n = int.Parse(sr.ReadLine());
             for(int i=0;i<n;i++){
                 string s = sr.ReadLine();
@@ -27,7 +27,7 @@ namespace snake
         }
         public Wall(int level){
             body = new List<Point>();
-            sign = "o";
+            sign = "*";
             color = ConsoleColor.Magenta;
             ReadLevel(level);
         }

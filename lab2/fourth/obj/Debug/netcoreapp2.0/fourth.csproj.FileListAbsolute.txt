@@ -8,3 +8,13 @@
 /home/yerassyl/Projects/lab2/fourth/bin/Debug/netcoreapp2.0/fourth.pdb
 /home/yerassyl/Projects/lab2/fourth/obj/Debug/netcoreapp2.0/fourth.dll
 /home/yerassyl/Projects/lab2/fourth/obj/Debug/netcoreapp2.0/fourth.pdb
+/home/yera/c-/lab2/fourth/bin/Debug/netcoreapp2.0/fourth.deps.json
+/home/yera/c-/lab2/fourth/bin/Debug/netcoreapp2.0/fourth.runtimeconfig.json
+/home/yera/c-/lab2/fourth/bin/Debug/netcoreapp2.0/fourth.runtimeconfig.dev.json
+/home/yera/c-/lab2/fourth/bin/Debug/netcoreapp2.0/fourth.dll
+/home/yera/c-/lab2/fourth/bin/Debug/netcoreapp2.0/fourth.pdb
+/home/yera/c-/lab2/fourth/obj/Debug/netcoreapp2.0/fourth.csproj.CoreCompileInputs.cache
+/home/yera/c-/lab2/fourth/obj/Debug/netcoreapp2.0/fourth.AssemblyInfoInputs.cache
+/home/yera/c-/lab2/fourth/obj/Debug/netcoreapp2.0/fourth.AssemblyInfo.cs
+/home/yera/c-/lab2/fourth/obj/Debug/netcoreapp2.0/fourth.dll
+/home/yera/c-/lab2/fourth/obj/Debug/netcoreapp2.0/fourth.pdb

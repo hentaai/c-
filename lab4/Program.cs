@@ -11,20 +11,20 @@ namespace lab4
 {
     class Program
     {
-        static XmlSerializer Serializerr(){
+        static XmlSerializer Serializerr(Complex o){
             XmlSerializer xs = new XmlSerializer(typeof(Complex));
             FileStream fs = new FileStream("data.xml", FileMode.OpenOrCreate);
-            Complex c = new Complex (0,0);
-            xs.Serialize(fs ,c);
+            xs.Serialize(fs ,o);
             fs.Close();
             return xs;
         }
         static void Deserializerr(XmlSerializer xs){
-            XmlSerializer dxs = new XmlSerializer(typeof(Complex));
-            FileStream dfs = new FileStream("data.xml", FileMode.Open);
-            Complex d = dxs.Deserialize(dfs) as Complex;
-            Console.WriteLine(d.a.ToString());
-            Console.WriteLine(d.b.ToString());
+            XmlSerializer xfs = new XmlSerializer(typeof(Complex));
+            FileStream dfs =  new FileStream("data.xml", FileMode.Open,FileAccess.ReadWrite);
+            Complex l = xfs.Deserialize(dfs) as Complex;
+            Console.WriteLine(l.a);
+            Console.WriteLine(l.b);
+            dfs.Close();
         }
         static void Main(string[] args)
         {
@@ -38,7 +38,7 @@ namespace lab4
             Complex a = new Complex(a_, b_);
             Complex b = new Complex(c_, d_);
             Complex kek = a + b;
-            Deserializerr(Serializerr());
+            Deserializerr(Serializerr(kek));
         }
     }
 }
