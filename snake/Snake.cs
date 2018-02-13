@@ -18,7 +18,7 @@ namespace snake
         public Snake()
         {
             body = new List<Point>();
-            body.Add(new Point(10, 10));
+            body.Add(new Point(20, 20));
             sign = "o";
             color = ConsoleColor.Yellow;
             cnt = 0;
@@ -59,6 +59,22 @@ namespace snake
             }
             return false;
         }
+        public bool Inthesnake(int co1,int co2){
+            for(int i = 1; i<body.Count; i++){
+                if(co1 == body[i].x && co2 == body[i].y){
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool Inthewall(int co1,int co2,Wall s){
+            foreach(Point p in s.body){
+                if(co1 == p.x && co2 == p.y){
+                    return true;
+                }
+            }
+            return false;
+        }
         public void Draw(){
             int index = 0;
             foreach(Point p in body){
@@ -73,8 +89,7 @@ namespace snake
                     Console.Write(sign);
                     index++;
                 }
-            }
-            
+            }   
         }
         public bool Collide(Wall s){
             foreach(Point p in s.body){

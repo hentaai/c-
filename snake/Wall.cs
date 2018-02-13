@@ -17,7 +17,7 @@ namespace snake
             int n = int.Parse(sr.ReadLine());
             for(int i=0;i<n;i++){
                 string s = sr.ReadLine();
-                for(int j=0;j<s.Length;i++){
+                for(int j=0;j<s.Length;j++){
                     if(s[j] == '*'){
                         body.Add(new Point(j,i));
                     }   
@@ -38,5 +38,6 @@ namespace snake
                 Console.Write(sign);
             }
         }
+        
     }
 }
