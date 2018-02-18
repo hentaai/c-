@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace snake
 {
@@ -14,7 +16,7 @@ namespace snake
         public int cnt;
         public Random random = new Random();
         
-        
+
         public Snake()
         {
             body = new List<Point>();
@@ -51,10 +53,16 @@ namespace snake
                 body[0].y = 1;
             }
         }
-
-        public bool Eaten(int co1,int co2){
-            if(body[0].x == co1 && body[0].y == co2){ 
+        public void Serialization(){
+            XmlSerializer xs = new XmlSerializer(typeof(Snake));
+            FileStream fs = new FileStream("data.xml",FileMode.OpenOrCreate);
+            xs.Serialize(fs, this);
+            fs.Close();
+        }
+        public bool Eaten(Fruit fruit){
+            if(body[0].x == fruit.coordinates.x && body[0].y == fruit.coordinates.y){ 
                 body.Add(new Point(0,0));
+                fruit.FoodMaker();
                 return true;
             }
             return false;

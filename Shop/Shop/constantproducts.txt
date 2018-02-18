@@ -1,0 +1,8 @@
+7
+nvidia geforce gtx 1050:200000
+aerocool vx-500:50000
+kingston hyperx fury ddr4:100000
+intel core i9 7900x:150000
+samsung ssd 850 evo:110000
+acer predator x34p 4K:100000
+aerocool v3x:30000

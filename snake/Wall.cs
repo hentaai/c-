@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace snake
 {
@@ -25,6 +26,7 @@ namespace snake
             }
             sr.Close();
         }
+        public Wall(){}
         public Wall(int level){
             body = new List<Point>();
             sign = "*";
@@ -37,6 +39,12 @@ namespace snake
                 Console.SetCursorPosition(p.x,p.y);
                 Console.Write(sign);
             }
+        }
+        public void Serialization(){
+            XmlSerializer xs = new XmlSerializer(typeof(Wall));
+            FileStream fs = new FileStream("data2.xml",FileMode.OpenOrCreate);
+            xs.Serialize(fs, this);
+            fs.Close();
         }
         
     }

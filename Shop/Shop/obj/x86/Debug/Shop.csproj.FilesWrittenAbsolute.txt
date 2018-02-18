@@ -1,0 +1,5 @@
+/home/yera/Shop/Shop/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/yera/Shop/Shop/bin/Debug/Shop.pdb
+/home/yera/Shop/Shop/bin/Debug/Shop.exe
+/home/yera/Shop/Shop/obj/x86/Debug/Shop.exe
+/home/yera/Shop/Shop/obj/x86/Debug/Shop.pdb

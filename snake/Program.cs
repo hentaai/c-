@@ -11,18 +11,15 @@ namespace snake
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             Snake snake = new Snake();
-            Point coordinatess = new Point(0,0);
-            Fruits fruit = new Fruits();
-            Random rnd = new Random ();
+            Fruit fruit = new Fruit();
             int level = 1;
             int cnt = 0;
             int score = 0;
-            Console.Clear();
-            fruit.FoodMaker(coordinatess);
-            fruit.DrawFood(coordinatess.x,coordinatess.y);
+            int kek = 0;
             while(true){
                 if(cnt == 3){
                     level++;
@@ -31,22 +28,35 @@ namespace snake
                 Wall wall = new Wall (level);
                 ConsoleKeyInfo keyInfo = Console.ReadKey(); 
                 if(keyInfo.Key == ConsoleKey.UpArrow){
-                    snake.Move(0,-1);
+                    if(kek == 1) continue;
+                    else snake.Move(0,-1);
+                    kek = 2;
                 }
                 if(keyInfo.Key == ConsoleKey.DownArrow){
-                    snake.Move(0,1);
+                    if(kek == 2) continue;
+                    else snake.Move(0,1);
+                    kek = 1;
                 }
                 if(keyInfo.Key == ConsoleKey.LeftArrow){
-                    snake.Move(-1,0);
+                    if(kek == 3) continue;
+                    else snake.Move(-1,0);
+                    kek = 4;
                 }
                 if(keyInfo.Key == ConsoleKey.RightArrow){
-                    snake.Move(1,0);
+                    if(kek == 4) continue;
+                    else snake.Move(1,0);
+                    kek = 3;
                 }
                 if(keyInfo.Key == ConsoleKey.R){
                     snake = new Snake();
                 }
-                if(snake.Inthesnake(coordinatess.x,coordinatess.y) || snake.Inthewall(coordinatess.x, coordinatess.y, wall)){
-                    fruit.FoodMaker(coordinatess);
+                if(keyInfo.Key == ConsoleKey.S){
+                    snake.Serialization();
+                    wall.Serialization();
+                    fruit.Serialization();
+                }
+                while(snake.Inthesnake(fruit.coordinates.x,fruit.coordinates.y) || snake.Inthewall(fruit.coordinates.x, fruit.coordinates.y, wall)){
+                    fruit.FoodMaker();
                 }
                 if(snake.Bump() || snake.Collide(wall)){
                     Console.Clear();
@@ -55,28 +65,20 @@ namespace snake
                     Console.ReadKey();
                     snake = new Snake();
                     level = 1;
+                    score  = 0;
                 }
-                if(snake.Eaten(coordinatess.x,coordinatess.y) == true){
-                    fruit.FoodMaker(coordinatess);
-                    Console.Clear();
-                    snake.Draw();
-                    fruit.DrawFood(coordinatess.x,coordinatess.y);
-                    wall.Draw();
+                
+                if(snake.Eaten(fruit) == true){
                     cnt++;
-                    score++;
-                    Console.SetCursorPosition(150,200);
-                    Console.Write("Score:"+score.ToString());
-                    Console.Write("Level:"+level);
+                    score++;   
                 }
-                else{
-                    Console.Clear();
-                    snake.Draw();
-                    fruit.DrawFood(coordinatess.x,coordinatess.y);
-                    wall.Draw();
-                    Console.SetCursorPosition(150,200);
-                    Console.Write("Score:"+score.ToString());
-                    Console.Write("Level:"+level);
-                }
+                Console.Clear();
+                snake.Draw();
+                fruit.DrawFood();
+                wall.Draw();
+                Console.SetCursorPosition(150,200);
+                Console.Write("Score:"+score.ToString());
+                Console.Write("Level:"+level);
             } 
         }
     }
