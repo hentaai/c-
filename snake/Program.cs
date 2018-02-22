@@ -24,7 +24,6 @@ namespace snake
         static int speed = 200;    
 
         static void Game(){
-            snake.body.Add(new Point(20,20));
             while(!gameOver){
                 if(cnt == 3){
                     level++;
@@ -53,7 +52,6 @@ namespace snake
                     Console.WriteLine("GAME OVER");
                     Console.ReadKey();
                     snake = new Snake();
-                    snake.body.Add(new Point(20,20));
                     level = 1;
                     score  = 0;
                     speed = 500;
