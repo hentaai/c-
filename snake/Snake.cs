@@ -8,30 +8,20 @@ using System.IO;
 
 namespace snake
 {
+
     public class Snake
     {
         public List<Point> body;
-        string sign;
-        ConsoleColor color;
-        public int cnt;
-        public Random random = new Random();
-        
+        public string sign;
+        public ConsoleColor color = ConsoleColor.Yellow;        
 
         public Snake()
         {
             body = new List<Point>();
-            body.Add(new Point(20, 20));
             sign = "o";
-            color = ConsoleColor.Yellow;
-            cnt = 0;
         }
 
         public void Move(int dx, int dy){
-            cnt++;
-            if(cnt%1000 == 0){
-                body.Add(new Point(0, 0));
-            }
-
             for(int i = body.Count - 1; i > 0; i--){
                 body[i].x = body[i-1].x;
                 body[i].y = body[i-1].y;
@@ -55,9 +45,16 @@ namespace snake
         }
         public void Serialization(){
             XmlSerializer xs = new XmlSerializer(typeof(Snake));
-            FileStream fs = new FileStream("data.xml",FileMode.OpenOrCreate);
+            FileStream fs = new FileStream("data.xml",FileMode.Create,FileAccess.ReadWrite);
             xs.Serialize(fs, this);
             fs.Close();
+        }
+        public Snake Deserialization(){
+            XmlSerializer xs = new XmlSerializer(typeof(Snake));
+            FileStream fs = new FileStream("data.xml",FileMode.OpenOrCreate,FileAccess.ReadWrite);
+            Snake snake = xs.Deserialize(fs) as Snake;
+            fs.Close();
+            return snake;
         }
         public bool Eaten(Fruit fruit){
             if(body[0].x == fruit.coordinates.x && body[0].y == fruit.coordinates.y){ 

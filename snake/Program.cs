@@ -6,54 +6,43 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace snake
 {
-    class Program
-    {
-        
-        static void Main(string[] args)
-        {
-            Snake snake = new Snake();
-            Fruit fruit = new Fruit();
-            int level = 1;
-            int cnt = 0;
-            int score = 0;
-            int kek = 0;
-            while(true){
+    public class Program
+    {       
+        static Snake snake = new Snake();
+        static Fruit fruit = new Fruit();
+        static int level = 1;
+        static Wall wall = new Wall (level); 
+        static int cnt = 0;
+        static int score = 0;
+        static int direction = 1;
+        static bool gameOver = false;
+        static int speed = 200;    
+
+        static void Game(){
+            snake.body.Add(new Point(20,20));
+            while(!gameOver){
                 if(cnt == 3){
                     level++;
                     cnt=0;
                 }
-                Wall wall = new Wall (level);
-                ConsoleKeyInfo keyInfo = Console.ReadKey(); 
-                if(keyInfo.Key == ConsoleKey.UpArrow){
-                    if(kek == 1) continue;
-                    else snake.Move(0,-1);
-                    kek = 2;
+                wall = new Wall(level);
+
+                if(direction == 1 ){
+                    snake.Move(0,-1);
                 }
-                if(keyInfo.Key == ConsoleKey.DownArrow){
-                    if(kek == 2) continue;
-                    else snake.Move(0,1);
-                    kek = 1;
+                if(direction == 2){
+                    snake.Move(0,1);
                 }
-                if(keyInfo.Key == ConsoleKey.LeftArrow){
-                    if(kek == 3) continue;
-                    else snake.Move(-1,0);
-                    kek = 4;
+                if(direction == 3){
+                    snake.Move(1,0);
                 }
-                if(keyInfo.Key == ConsoleKey.RightArrow){
-                    if(kek == 4) continue;
-                    else snake.Move(1,0);
-                    kek = 3;
-                }
-                if(keyInfo.Key == ConsoleKey.R){
-                    snake = new Snake();
-                }
-                if(keyInfo.Key == ConsoleKey.S){
-                    snake.Serialization();
-                    wall.Serialization();
-                    fruit.Serialization();
+                if(direction == 4){
+                    snake.Move(-1,0);
                 }
                 while(snake.Inthesnake(fruit.coordinates.x,fruit.coordinates.y) || snake.Inthewall(fruit.coordinates.x, fruit.coordinates.y, wall)){
                     fruit.FoodMaker();
@@ -64,8 +53,10 @@ namespace snake
                     Console.WriteLine("GAME OVER");
                     Console.ReadKey();
                     snake = new Snake();
+                    snake.body.Add(new Point(20,20));
                     level = 1;
                     score  = 0;
+                    speed = 500;
                 }
                 
                 if(snake.Eaten(fruit) == true){
@@ -79,7 +70,52 @@ namespace snake
                 Console.SetCursorPosition(150,200);
                 Console.Write("Score:"+score.ToString());
                 Console.Write("Level:"+level);
+
+                if(score%3 == 0 && score != 0 ){
+                    speed = Math.Max(speed - 1,1);
+                }
+
+                Thread.Sleep(speed);
             } 
+        }
+
+        static void Main(string[] args)
+        {
+            Console.CursorVisible = false;
+            Thread thread = new Thread(Game);
+            thread.Start();
+
+            while(!gameOver){
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+                if(keyInfo.Key == ConsoleKey.UpArrow){
+                    direction = 1;
+                }
+                if(keyInfo.Key == ConsoleKey.DownArrow){
+                    direction = 2;
+                }
+                if(keyInfo.Key == ConsoleKey.RightArrow){
+                    direction = 3;
+                }
+                if(keyInfo.Key == ConsoleKey.LeftArrow){
+                    direction = 4;
+                }
+                if(keyInfo.Key == ConsoleKey.Escape){
+                    gameOver = true;
+                }
+                if(keyInfo.Key == ConsoleKey.R){
+                    snake = new Snake();
+                }
+                if(keyInfo.Key == ConsoleKey.S){
+                    snake.Serialization();
+                    wall.Serialization();
+                    fruit.Serialization();
+                }
+                if(keyInfo.Key == ConsoleKey.L){
+                    snake = snake.Deserialization();
+                    wall = wall.Deserialization();
+                    fruit = fruit.Deserialization();
+                }
+            }
         }
     }
 }

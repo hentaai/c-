@@ -8,7 +8,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace snake
-{
+{   
+    [Serializable, XmlRoot("Fruit")]
     public class Fruit
     {
         public Random rnd = new Random ();
@@ -29,9 +30,16 @@ namespace snake
         }
         public void Serialization(){
             XmlSerializer xs = new XmlSerializer(typeof(Fruit));
-            FileStream fs = new FileStream("data1.xml",FileMode.OpenOrCreate);
+            FileStream fs = new FileStream("data1.xml",FileMode.Create);
             xs.Serialize(fs, this);
             fs.Close();
+        }
+        public Fruit Deserialization(){
+            XmlSerializer xs = new XmlSerializer(typeof(Fruit));
+            FileStream fs = new FileStream("data1.xml",FileMode.OpenOrCreate);
+            Fruit fruit = xs.Deserialize(fs) as Fruit;
+            fs.Close();
+            return fruit;
         }
     }
 

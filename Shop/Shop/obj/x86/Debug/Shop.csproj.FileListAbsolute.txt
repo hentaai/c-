@@ -1,0 +1,2 @@
+/home/yera/c-/Shop/Shop/obj/x86/Debug/Shop.exe
+/home/yera/c-/Shop/Shop/obj/x86/Debug/Shop.pdb

@@ -42,10 +42,16 @@ namespace snake
         }
         public void Serialization(){
             XmlSerializer xs = new XmlSerializer(typeof(Wall));
-            FileStream fs = new FileStream("data2.xml",FileMode.OpenOrCreate);
+            FileStream fs = new FileStream("data2.xml",FileMode.Create);
             xs.Serialize(fs, this);
             fs.Close();
         }
-        
+        public Wall Deserialization(){
+            XmlSerializer xs = new XmlSerializer(typeof(Wall));
+            FileStream fs = new FileStream("data2.xml",FileMode.OpenOrCreate);
+            Wall wall = xs.Deserialize(fs) as Wall;
+            fs.Close();
+            return wall;
+        }
     }
 }
