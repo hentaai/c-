@@ -17,7 +17,6 @@ namespace snake
 
         public Snake()
         {
-            body.Add(new Point(20,20));
             body = new List<Point>();
             sign = "o";
         }

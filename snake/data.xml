@@ -2,20 +2,24 @@
 <Snake xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <body>
     <Point>
-      <x>198</x>
-      <y>44</y>
+      <x>102</x>
+      <y>32</y>
     </Point>
     <Point>
-      <x>199</x>
-      <y>44</y>
+      <x>103</x>
+      <y>32</y>
     </Point>
     <Point>
-      <x>200</x>
-      <y>44</y>
+      <x>104</x>
+      <y>32</y>
     </Point>
     <Point>
-      <x>201</x>
-      <y>44</y>
+      <x>105</x>
+      <y>32</y>
+    </Point>
+    <Point>
+      <x>0</x>
+      <y>0</y>
     </Point>
   </body>
   <sign>o</sign>

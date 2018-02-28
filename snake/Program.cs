@@ -18,18 +18,21 @@ namespace snake
         static int level = 1;
         static Wall wall = new Wall (level); 
         static int cnt = 0;
+        static int cntsave = 0;
         static int score = 0;
+        static int scoresave = 0;
         static int direction = 1;
         static bool gameOver = false;
         static int speed = 200;    
 
         static void Game(){
+            snake.body.Add(new Point(20,20));
             while(!gameOver){
                 if(cnt == 3){
                     level++;
                     cnt=0;
+                    wall = new Wall(level);
                 }
-                wall = new Wall(level);
 
                 if(direction == 1 ){
                     snake.Move(0,-1);
@@ -52,6 +55,7 @@ namespace snake
                     Console.WriteLine("GAME OVER");
                     Console.ReadKey();
                     snake = new Snake();
+                    snake.body.Add(new Point(20,20));
                     level = 1;
                     score  = 0;
                     speed = 500;
@@ -107,11 +111,15 @@ namespace snake
                     snake.Serialization();
                     wall.Serialization();
                     fruit.Serialization();
+                    scoresave = score;
+                    cntsave = cnt;
                 }
                 if(keyInfo.Key == ConsoleKey.L){
                     snake = snake.Deserialization();
                     wall = wall.Deserialization();
                     fruit = fruit.Deserialization();
+                    score = scoresave;
+                    cnt = cntsave ;
                 }
             }
         }
