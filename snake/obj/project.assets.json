@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "/home/yera/.nuget/packages/": {},
+    "/root/.nuget/packages/": {},
     "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,14 +673,14 @@
       "projectUniqueName": "/home/yera/c-/snake/snake.csproj",
       "projectName": "snake",
       "projectPath": "/home/yera/c-/snake/snake.csproj",
-      "packagesPath": "/home/yera/.nuget/packages/",
+      "packagesPath": "/root/.nuget/packages/",
       "outputPath": "/home/yera/c-/snake/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/yera/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"

@@ -2,7 +2,7 @@
 <Fruit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <rnd />
   <coordinates>
-    <x>130</x>
-    <y>11</y>
+    <x>67</x>
+    <y>14</y>
   </coordinates>
 </Fruit>
